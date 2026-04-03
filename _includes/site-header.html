@@ -1,7 +1,10 @@
 <header class="site-header">
   <div class="container">
     <div class="site-title">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }}" class="site-logo">
+        {{ site.title }}
+      </a>
     </div>
     <nav class="site-nav">
       <ul>
