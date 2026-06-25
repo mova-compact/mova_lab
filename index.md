@@ -12,18 +12,18 @@ lang: en
 <div class="navigation-block">
   <h2>Explore</h2>
   <ul>
-    <li><a href="/articles/">Articles & Publications</a></li>
-    <li><a href="/story/">My Story</a></li>
-    <li><a href="/projects/">Projects</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/uk/">Українська версія</a></li>
+    <li><a href="{{ '/articles/' | relative_url }}">Articles & Publications</a></li>
+    <li><a href="{{ '/story/' | relative_url }}">My Story</a></li>
+    <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/uk/' | relative_url }}">Українська версія</a></li>
   </ul>
 </div>
 
 <div class="mova-block">
   <h2>MOVA Ecosystem</h2>
   <p>MOVA is my contract language and execution model for business-grade AI systems.</p>
-  <a href="/projects/mova/">Learn more about MOVA</a>
+  <a href="{{ '/projects/mova/' | relative_url }}">Learn more about MOVA</a>
 </div>
 
 <div class="story-block">
@@ -40,7 +40,7 @@ lang: en
       <p>{{ featured_story.summary }}</p>
     </article>
   {% endif %}
-  <a href="/story/">Read my story</a>
+  <a href="{{ '/story/' | relative_url }}">Read my story</a>
 </div>
 
 <div class="projects-block">
@@ -49,7 +49,7 @@ lang: en
   {% for project in featured_projects %}
     {% include project-card.html project=project %}
   {% endfor %}
-  <a href="/projects/">View all projects</a>
+  <a href="{{ '/projects/' | relative_url }}">View all projects</a>
 </div>
 
 <div class="projects-block">
@@ -70,5 +70,5 @@ lang: en
       <time>{{ post.date | date: "%B %d, %Y" }}</time>
     </article>
   {% endfor %}
-  <a href="/articles/">View all articles</a>
+  <a href="{{ '/articles/' | relative_url }}">View all articles</a>
 </div>

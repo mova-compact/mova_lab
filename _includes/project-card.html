@@ -7,7 +7,7 @@
     {% assign title = include.project.title %}
     {% assign summary = include.project.summary %}
   {% endif %}
-  <h3><a href="{{ include.project.url }}">{{ title }}</a></h3>
+  <h3><a href="{{ include.project.url | relative_url }}">{{ title }}</a></h3>
   <p>{{ summary }}</p>
   {% if include.project.project_type %}
     <span class="project-type">{{ include.project.project_type }}</span>

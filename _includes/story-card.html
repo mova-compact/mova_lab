@@ -7,7 +7,7 @@
     {% assign title = include.chapter.title %}
     {% assign summary = include.chapter.summary %}
   {% endif %}
-  <h3><a href="{{ include.chapter.url }}">{{ title }}</a></h3>
+  <h3><a href="{{ include.chapter.url | relative_url }}">{{ title }}</a></h3>
   {% if include.chapter.chapter_id %}
     <p class="chapter-id">Chapter {{ include.chapter.chapter_id }}</p>
   {% endif %}

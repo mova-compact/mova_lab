@@ -13,18 +13,18 @@ permalink: /uk/
 <div class="navigation-block">
   <h2>Перейти</h2>
   <ul>
-    <li><a href="/uk/articles/">Статті та публікації</a></li>
-    <li><a href="/uk/story/">Моя історія</a></li>
-    <li><a href="/uk/projects/">Проєкти</a></li>
-    <li><a href="/uk/about/">Про мене</a></li>
-    <li><a href="/">English version</a></li>
+    <li><a href="{{ '/uk/articles/' | relative_url }}">Статті та публікації</a></li>
+    <li><a href="{{ '/uk/story/' | relative_url }}">Моя історія</a></li>
+    <li><a href="{{ '/uk/projects/' | relative_url }}">Проєкти</a></li>
+    <li><a href="{{ '/uk/about/' | relative_url }}">Про мене</a></li>
+    <li><a href="{{ '/' | relative_url }}">English version</a></li>
   </ul>
 </div>
 
 <div class="mova-block">
   <h2>Екосистема MOVA</h2>
   <p>MOVA — це моя мова контрактів і модель виконання для бізнесових AI-систем.</p>
-  <a href="/projects/mova/">Дізнатися більше про MOVA</a>
+  <a href="{{ '/projects/mova/' | relative_url }}">Дізнатися більше про MOVA</a>
 </div>
 
 <div class="story-block">
@@ -41,7 +41,7 @@ permalink: /uk/
       <p>{{ featured_story.summary }}</p>
     </article>
   {% endif %}
-  <a href="/uk/story/">Читати історію</a>
+  <a href="{{ '/uk/story/' | relative_url }}">Читати історію</a>
 </div>
 
 <div class="projects-block">
@@ -50,7 +50,7 @@ permalink: /uk/
   {% for project in featured_projects %}
     {% include project-card.html project=project %}
   {% endfor %}
-  <a href="/uk/projects/">Усі проєкти</a>
+  <a href="{{ '/uk/projects/' | relative_url }}">Усі проєкти</a>
 </div>
 
 <div class="projects-block">
@@ -71,5 +71,5 @@ permalink: /uk/
       <time>{{ post.date | date: "%d %B %Y" }}</time>
     </article>
   {% endfor %}
-  <a href="/uk/articles/">Усі статті</a>
+  <a href="{{ '/uk/articles/' | relative_url }}">Усі статті</a>
 </div>

@@ -7,7 +7,7 @@
     {% assign title = include.item.title %}
     {% assign summary = include.item.summary | default: include.item.excerpt %}
   {% endif %}
-  <h3><a href="{{ include.item.url }}">{{ title }}</a></h3>
+  <h3><a href="{{ include.item.url | relative_url }}">{{ title }}</a></h3>
   <p>{{ summary }}</p>
   {% if include.item.date %}
     <time>{{ include.item.date | date: "%B %d, %Y" }}</time>
