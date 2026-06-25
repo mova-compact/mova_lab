@@ -5,6 +5,10 @@ url: "https://mova-compact.github.io"
 baseurl: "/mova_blog"
 author: "MOVA Team"
 email: "contact@mova-compact.github.io"
+default_lang: en
+languages:
+  - en
+  - uk
 
 # Build settings
 markdown: kramdown

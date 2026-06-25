@@ -1,7 +1,15 @@
 <article class="story-card">
-  <h3><a href="{{ include.chapter.url }}">{{ include.chapter.title }}</a></h3>
+  {% assign lang = page.lang | default: site.default_lang | default: 'en' %}
+  {% if lang == 'uk' %}
+    {% assign title = include.chapter.title_uk | default: include.chapter.title %}
+    {% assign summary = include.chapter.summary_uk | default: include.chapter.summary %}
+  {% else %}
+    {% assign title = include.chapter.title %}
+    {% assign summary = include.chapter.summary %}
+  {% endif %}
+  <h3><a href="{{ include.chapter.url }}">{{ title }}</a></h3>
   {% if include.chapter.chapter_id %}
     <p class="chapter-id">Chapter {{ include.chapter.chapter_id }}</p>
   {% endif %}
-  <p>{{ include.chapter.summary }}</p>
+  <p>{{ summary }}</p>
 </article>

@@ -1,6 +1,14 @@
 <article class="project-card">
-  <h3><a href="{{ include.project.url }}">{{ include.project.title }}</a></h3>
-  <p>{{ include.project.summary }}</p>
+  {% assign lang = page.lang | default: site.default_lang | default: 'en' %}
+  {% if lang == 'uk' %}
+    {% assign title = include.project.title_uk | default: include.project.title %}
+    {% assign summary = include.project.summary_uk | default: include.project.summary %}
+  {% else %}
+    {% assign title = include.project.title %}
+    {% assign summary = include.project.summary %}
+  {% endif %}
+  <h3><a href="{{ include.project.url }}">{{ title }}</a></h3>
+  <p>{{ summary }}</p>
   {% if include.project.project_type %}
     <span class="project-type">{{ include.project.project_type }}</span>
   {% endif %}

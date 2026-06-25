@@ -1,6 +1,14 @@
 <article class="content-card">
-  <h3><a href="{{ include.item.url }}">{{ include.item.title }}</a></h3>
-  <p>{{ include.item.summary | default: include.item.excerpt }}</p>
+  {% assign lang = page.lang | default: site.default_lang | default: 'en' %}
+  {% if lang == 'uk' %}
+    {% assign title = include.item.title_uk | default: include.item.title %}
+    {% assign summary = include.item.summary_uk | default: include.item.summary | default: include.item.excerpt %}
+  {% else %}
+    {% assign title = include.item.title %}
+    {% assign summary = include.item.summary | default: include.item.excerpt %}
+  {% endif %}
+  <h3><a href="{{ include.item.url }}">{{ title }}</a></h3>
+  <p>{{ summary }}</p>
   {% if include.item.date %}
     <time>{{ include.item.date | date: "%B %d, %Y" }}</time>
   {% endif %}
