@@ -2,7 +2,7 @@
 title: "MOVA Publishing Hub"
 description: "Personal publishing hub for MOVA projects, articles, and stories"
 url: "https://mova-compact.github.io"
-baseurl: "/mova_blog"
+baseurl: "/mova_lab"
 author: "MOVA Team"
 email: "contact@mova-compact.github.io"
 default_lang: en

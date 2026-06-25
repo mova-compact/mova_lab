@@ -17,7 +17,7 @@ This repository is the public facade for the work around:
 1. Install Ruby and Bundler
 2. Run `bundle install`
 3. Run `bundle exec jekyll serve`
-4. Open `http://localhost:4000/mova_blog`
+4. Open `http://localhost:4000/mova_lab`
 
 ## Structure
 
