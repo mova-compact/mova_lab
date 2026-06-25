@@ -1,6 +1,6 @@
-# MOVA Publishing Hub
+# MOVA Lab
 
-This repository is the public facade for the work around:
+This repository is the public site for MOVA Lab and its work around:
 
 - AI consulting for business processes
 - contract AI products
