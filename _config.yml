@@ -1,9 +1,9 @@
 # Site settings
-title: "MOVA Publishing Hub"
-description: "Personal publishing hub for MOVA projects, articles, and stories"
+title: "MOVA Lab"
+description: "Contract-based AI systems for business: controlled actions, verification, and practical automation."
 url: "https://mova-compact.github.io"
 baseurl: "/mova_lab"
-author: "MOVA Team"
+author: "MOVA Lab"
 email: "contact@mova-compact.github.io"
 default_lang: en
 languages:
