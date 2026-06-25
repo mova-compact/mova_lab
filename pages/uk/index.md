@@ -89,7 +89,7 @@ permalink: /uk/
       <p>{{ featured_story.summary }}</p>
     </article>
   {% endif %}
-  <a href="{{ '/story/' | relative_url }}">Читати історію</a>
+  <a href="{{ '/uk/story/' | relative_url }}">Читати історію</a>
 </div>
 
 <div class="projects-block">
@@ -101,7 +101,7 @@ permalink: /uk/
       <p>{{ project.summary }}</p>
     </article>
   {% endfor %}
-  <a href="{{ '/projects/' | relative_url }}">Усі проєкти</a>
+  <a href="{{ '/uk/projects/' | relative_url }}">Усі проєкти</a>
 </div>
 
 <div class="recent-posts">
@@ -114,5 +114,5 @@ permalink: /uk/
       <time>{{ post.date | date: "%d.%m.%Y" }}</time>
     </article>
   {% endfor %}
-  <a href="{{ '/articles/' | relative_url }}">Усі статті</a>
+  <a href="{{ '/uk/articles/' | relative_url }}">Усі статті</a>
 </div>

@@ -2,14 +2,16 @@
   <div class="container">
     {% assign lang = page.lang | default: site.default_lang | default: 'en' %}
     {% if lang == 'uk' %}
+      {% assign prefix = '/uk' %}
       {% assign switch_href = '/' %}
       {% assign switch_label = 'English' %}
       {% assign nav_home = 'Головна' %}
       {% assign nav_articles = 'Статті' %}
       {% assign nav_story = 'Історія' %}
       {% assign nav_projects = 'Проєкти' %}
-      {% assign nav_about = 'Про сайт' %}
+      {% assign nav_about = 'Про мене' %}
     {% else %}
+      {% assign prefix = '' %}
       {% assign switch_href = '/uk/' %}
       {% assign switch_label = 'Українська' %}
       {% assign nav_home = 'Home' %}
@@ -26,11 +28,11 @@
     </div>
     <nav class="site-nav">
       <ul>
-        <li><a href="{% if lang == 'uk' %}{{ '/uk/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ nav_home }}</a></li>
-        <li><a href="{{ '/articles/' | relative_url }}">{{ nav_articles }}</a></li>
-        <li><a href="{{ '/story/' | relative_url }}">{{ nav_story }}</a></li>
-        <li><a href="{{ '/projects/' | relative_url }}">{{ nav_projects }}</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">{{ nav_about }}</a></li>
+        <li><a href="{{ prefix | append: '/' | relative_url }}">{{ nav_home }}</a></li>
+        <li><a href="{{ prefix | append: '/articles/' | relative_url }}">{{ nav_articles }}</a></li>
+        <li><a href="{{ prefix | append: '/story/' | relative_url }}">{{ nav_story }}</a></li>
+        <li><a href="{{ prefix | append: '/projects/' | relative_url }}">{{ nav_projects }}</a></li>
+        <li><a href="{{ prefix | append: '/about/' | relative_url }}">{{ nav_about }}</a></li>
         <li><a href="{{ switch_href | relative_url }}">{{ switch_label }}</a></li>
       </ul>
     </nav>
